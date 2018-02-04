@@ -1,0 +1,14 @@
+#include<LiquidCrystal.h>
+LiquidCrystal lcd(12,11,5,4,3,2); // same sequence always
+void setup() {
+  lcd.begin(16,2); // LCD type 16x2
+  lcd.print("IoT Army of 300");
+
+}
+
+void loop() {
+  
+   lcd.setCursor(0,1); //postioning. first value coloum,2nd value row
+   lcd.print("Counter: ");
+   lcd.print(millis()/1000); //millis library function
+}
